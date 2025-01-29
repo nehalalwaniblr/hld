@@ -28,3 +28,25 @@ Fault tolerance: The system should be reliable enough to provide suggestions des
 
 Scalability: The system should support the ever-increasing number of users over time.
 
+### Resource estimation#
+ Google receives more than 3.5 billion searches every day.
+ 
+**Storage estimation**
+Assuming that out of the 3.5 billion queries per day, two billion queries are unique and need to be stored. Let’s also assume that each query consists of 15 characters on average, and each character takes 2 Bytes of storage. According to this formulation, we would require the following:
+
+<img width="746" alt="Screenshot 2025-01-29 at 10 26 08 AM" src="https://github.com/user-attachments/assets/cee1b0c1-e202-40a5-8102-e0c9a4a719f8" />
+
+**Bandwidth estimation#**
+<img width="886" alt="Screenshot 2025-01-29 at 10 52 49 AM" src="https://github.com/user-attachments/assets/ab91b2be-b881-4e9c-9b90-dd612c4eb2ba" />
+
+**Number of servers estimation#**
+Our system will receive 52.5 billion requests per day. Considering our assumption of using daily active users as a proxy for the number of requests per second for peak load, we get 52.5 billion requests per second (considering each character as a request).
+
+Recall that a typical server can serve 64,000 requests per second (RPS). So, the required servers can be estimated using the following formula:
+<img width="1013" alt="Screenshot 2025-01-29 at 10 58 04 AM" src="https://github.com/user-attachments/assets/b196b0c1-ef71-4f37-ab10-ca9befc3864e" />
+
+
+<img width="1084" alt="Screenshot 2025-01-29 at 10 57 46 AM" src="https://github.com/user-attachments/assets/8fa00d0d-4f0e-4b15-8cb0-bf40a15e6d62" />
+
+
+
