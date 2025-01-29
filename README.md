@@ -48,5 +48,9 @@ Recall that a typical server can serve 64,000 requests per second (RPS). So, the
 
 <img width="1084" alt="Screenshot 2025-01-29 at 10 57 46 AM" src="https://github.com/user-attachments/assets/8fa00d0d-4f0e-4b15-8cb0-bf40a15e6d62" />
 
+### Building blocks 
 
+Databases are required to keep the data related to the queries’ prefixes.
+Load balancers are required to disseminate incoming queries among a number of active servers.
+Caches are used to keep the top N suggestions for fast retrieval.
 
